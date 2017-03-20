@@ -18,15 +18,12 @@
 	<script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
 	<script type="text/javascript">
 		$(document).ready(function(){
-			var mainURL = "https://api.ebay.com/buy/browse/v1/item_summary/search?q=phone&limit=50&offset=50";
+			var mainURL = "https://api.ebay.com/buy/browse/v1/item_summary/search?";
 			var q = "15503 poster";
 			var filter = "sellers:{starcitybooks}";
 			$.ajax({
 				method: "GET",
-				url: mainURL,
-				//dataType: "jsonp",
-				//jsonpCallback : "callbackMethod",
-				//crossDomain: true,
+				url: mainURL + "q=" + q + "&filter=" + "filter",
 				beforeSend: function(xhr){
 					xhr.setRequestHeader("Authorization", "bearer v^1.1#i^1#f^0#I^3#p^3#r^0#t^H4sIAAAAAAAAAOVXa2wURRzv9WmDlfhEKuq5WNHq3s0+b3dtT64vOENLy7VQagiZ251tl+7tHrtzLQcxNk2ERIIx8klMeClGYoBAwGAEQYgkED8gELSAaYgvSDTyQTExkTh7fXCt2tKWD028D3eZ//wfv/9vfjM3A3oKi8vXL1z/R4mvKHd7D+jJ9fmYGaC4sOD5+/JySwtyQJaDb3vP0z35vXnXKlyYMJPKEuQmbctF/jUJ03KVjLGSSjmWYkPXcBULJpCrYFWJReoXKWwAKEnHxrZqm5Q/WlNJMYymApFnQzoEUJMFYrWGcjbblRTHiJwsSToLRJZl4hqZd90UilouhhaupFjAhGjA0SxoZkKKEFJ4KRDiQRvlX4oc17At4hIAVDgDV8nEOllYx4YKXRc5mCShwtFIXWxxJFpT29BcEczKFR7kIYYhTrkjR9W2hvxLoZlCY5dxM95KLKWqyHWpYHigwsikSmQIzCTgZ6jmOMDzEhQ1UWV4VlbvCpV1tpOAeGwcnsXQaD3jqiALGzg9HqOEjfgqpOLBUQNJEa3xez9NKWgauoGcSqq2KrK8JVa7hPLHGhsdu8vQkJYRlcSIskigQtNM2i4m8AOqnRgsM5BrkORRdaptSzM8ylx/g42rEMGMRjPDZzFDnBZbi52Ijj082X7yEIOc2OYt6cAapnCH5a0qShAa/Jnh+PwPCeK2BO6WJEQB8kAUGAhZFQHA/IskvL0+YVmEvZWJNDYGURym6QR0OhFOmlBFtEqoTSWQY2gKz8d5Eao6zbGSSvOaoNKyLCCaRSISWcjxQOf/P8rA2DHiKYyG1TF6ItNiJRVT7SRqtE1DTVOjXTJnzaAW1riVVAfGSSUY7O7uDnRzAdtpD7JkkYOt9YtiagdKQGrY1xjfmTYyqlARiXINBaeTBM0aIjpS3GqnwpyjNUIHp2PINIlhSLIjsIVHW/+jSddrcnq158W7JAFMGgFP1Z5sgjYkO9gzrcwg9t+JU9AlBAUG9gTJHHAQ1GzLTE8meAIxhtVFRGU76TEKent9/AQTKApV1U5ZeDI9DoZOIEJPmbphmt7emUzBrPCJwLSgmcaG6g6XnJLwI8lkVJtewo9hRBa+zqZjdRi5RHV045IaWmd1gQMyS440Eakc1PQp9a2hLkNFK41p1ruVMs0p9VXfPt1akniBYxkgkr3+HAAgNKX2alDXdJOrLPBA4yREi3Ek03w8rtGSLAl0PBQSJKgxICSDKfVcbRrkiGhOT7c/qIXedUabWmvkbji9mvKOGl5AmggYTlJ1lmZVKNI8L8h0XCJfEh9Hd9ryKEPWResft+vgyMdtOCfzYXp9h0Cvbz95H4MgKGPmgqcK81ry8+4tdQ2MAgbUA67RbpE3m4MCnSidhIaTW+irN2/w57Ke09tXgEeHH9TFecyMrNc1mHN7poCZOauECQHOuzwKIV5qA3Nvz+Yzj+Q/1NdwPmUcvX7g47MNX0ZevrAD7OlfBkqGnXy+gpz8Xl9OkxA5fvSJRYc33Nq2afe77/++8Wb6mf5dH66+mHyNflju2tN8qe74hdLqin3N1344Whv46sfT51Zdb6IfbAseKY12/nL26ks3tuzui80s3bXhxDb58b3LPjlQ9isqfnP9Fz8XnPypvOBS8bMVJ6t8ctEJXLLut/Jvy74uv3J1wf3Vl+/x9X2+uXNrUV5Ha9PaY2z/6uUtN5kjG47vuxLSP5udMx8f/JOG75Vv3XvszIVr819J/dW6dkuU+e7QvFebl3/6zht183Y9QFXs/P5yT8OZjUWb/LGtHU9+tGD26VvLXtwMX193q+8Ue2rOircvtpSVvHXw/I5Z37SeDObqgRciH+zsT9w4PPsqfGx/f9GO+MDy/Q2BSCDl6BAAAA==");
 					xhr.setRequestHeader("Accept","application/json");
@@ -37,7 +34,6 @@
 			}).done(function(snapshot){
 				console.log(snapshot);
 			});
-			debugger
 		});	
 	</script>
 	</div>
