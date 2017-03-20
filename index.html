@@ -18,7 +18,7 @@
 	<script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
 	<script type="text/javascript">
 		$(document).ready(function(){
-			var mainURL = "https://api.sandbox.ebay.com/buy/browse/v1/item_summary/search?q=phone&limit=50&offset=50";
+			var mainURL = "https://api.ebay.com/buy/browse/v1/item_summary/search?q=phone&limit=50&offset=50";
 			var q = "15503 poster";
 			var filter = "sellers:{starcitybooks}";
 			$.ajax({
@@ -26,20 +26,16 @@
 				url: mainURL,
 				//dataType: "jsonp",
 				//jsonpCallback : "callbackMethod",
-				crossDomain: true,
+				//crossDomain: true,
 				beforeSend: function(xhr){
-					xhr.setRequestHeader("Authorization", "Bearer v^1.1#i^1#f^0#p^3#I^3#r^0#t^H4sIAAAAAAAAAOVXW2wUVRjutttCraWRGEBUXEe5FWf3zGVnd6fshi1tQxN6gS0NEExzZuZsOzI7s5kz03YRS20iKXIpEuOLivVBUVBjIEggQAAhPBCjUR7wFiCgEoKEEBOEmOCZbbfdrhFaSmIT92X3nPPfvu///7PnB91FxeUbl2y8VeqalN/fDbrzXS6mBBQXFS6YUpA/szAPZAm4+ruf73b3FFxZiGFCS4rLEU4aOkaezoSmYzG9GaZsUxcNiFUs6jCBsGjJYixat1RkvUBMmoZlyIZGeWqrwhQHZBAXQBBKkOEFliW7esZmkxGmQnyIDYaCIUGQpACUBHKOsY1qdWxB3QpTLGACNOBoFjQxAdHPigzwBoNgNeVpRiZWDZ2IeAEVSYcrpnXNrFjvHSrEGJkWMUJFaqM1sYZobVV1fdNCX5atyCAPMQtaNh65WmwoyNMMNRvd2w1OS4sxW5YRxpQvMuBhpFExmgnmAcJPUw1lNsBBToJ+IHBSgHkoVNYYZgJa947D2VEVOp4WFZFuqVbqfowSNqSXkGwNruqJidoqj/O1zIaaGleRGaaqK6OrVsSql1OeWGOjabSrClIcpAzHsQE+yASoiIUwoRCZLRjqimR0OmtVbx30OGB2kO8cl4sNXVEd9rCn3rAqEQkf5ZLEZ5FEhBr0BjMat5zQsuVCGTIFIufLpNO22nQnwShBGPGkl/dPRaY2hqvhYVUHywchD6Ugx8QVlpdgpjqcXh9PhUScJEUbG31Igik6Ac21yEpqUEa0TKi1E8hUFZHnJV6Acpzm2KBM84pfpkMhP6JZJCCBhRwP4vz/skgsy1Ql20JDhZJ7kEYbpmKykUSNhqbKKSpXJH0DDZZFJw5TbZaVFH2+jo4ObwfnNcxWHwsA41tZtzQmt6EEyXxGVr2/MK2mi0NGRAuropVKkmg6Sf0R53orFeFMpRGaVqrSTpF1DGnaMLEjI4zk7v4LVOxAnVggHX1MDMCk6nXK3CsbCZ8BSUs7Wy3piD2jEfJJdor4V5DpNRFUDF1LjV6v1SZlO6A9OiVMsuEd6EgCg3h0en0sXkcaGIOOqreTWjbM1BhhjlQegw6UZcPWrQdxN6g6Bo24rcVVTXPa9UEcZqmPJUwdailLlfGQy3F1WTSZrFUmVpfFLEQSX2PQsZqBC5qOVa6kBTbu90uyP0grIE5+CIFx4VZQuyqjFnWCYddtTRsXrrrWHEik1z/+z2HV+6LjQlWF2idalYb8PFC4IKIFCYVoXpIUmswvfloKBPxBqDAgEALjwrxYU8nN0JSaaH+CSwxsIWV80MiDdGKBcm6YzAWjKDxLx4Eg0bwQZOhQnAW0HITMaCHnbGQ96f7xpPeNHK4jeekP0+M6AnpcB8l8DgKAZhaA+UUFK9wFj1JYtZB38PHqVWHci9VWncyOJvKuRakkVM38IlfdpS2rNmSN9f0vghlDg31xAVOSNeWDp4ZPCpmy6aVMAHDOc9XPMmA1eG741M1Mcz9ecmb33jtfdn0Huo6Dny/t+vaLQzd6QOmQkMtVmOfuceWFwzM7t3Z/9sqlW9+Ek5/PPTBjyundvbPm9B6QjevrZ6zlS/tulz19uuHmzbbrm8p7f0v+8dWb9b9c2L5+DWq+QO3t27lv9uHb13/aPOvqI/snH0tey3vPWv5R+9Fzc/YtuvvMxfO//7B0p7voLlexa3bsk6kXfzw1d7/77Ny8kvbX5h3ecu3D2y0Vl49INzdu585uPW8Ljx3vebtr0Y1z5WVfX6ne9Ndh9ur7U8/Coq43Dq483aucqGxqKT61bE/Hzt3r5m840106KbR1xyF5Ov606tYOpmXyExXbTr68kNq0blrq6okK74k9x5pP/rqtnO84+v0LW97ZvL3+ct+z1J3X2Xl9r761pveDP98tM2Y92T+Qxr8B+/Aaw3ARAAA=");
+					xhr.setRequestHeader("Authorization", "Bearer v^1.1#i^1#f^0#I^3#p^3#r^0#t^H4sIAAAAAAAAAOVXa2wURRzv9WmDlfhEKuq5WNHq3s0+b3dtT64vOENLy7VQagiZ251tl+7tHrtzLQcxNk2ERIIx8klMeClGYoBAwGAEQYgkED8gELSAaYgvSDTyQTExkTh7fXCt2tKWD028D3eZ//wfv/9vfjM3A3oKi8vXL1z/R4mvKHd7D+jJ9fmYGaC4sOD5+/JySwtyQJaDb3vP0z35vXnXKlyYMJPKEuQmbctF/jUJ03KVjLGSSjmWYkPXcBULJpCrYFWJReoXKWwAKEnHxrZqm5Q/WlNJMYymApFnQzoEUJMFYrWGcjbblRTHiJwsSToLRJZl4hqZd90UilouhhaupFjAhGjA0SxoZkKKEFJ4KRDiQRvlX4oc17At4hIAVDgDV8nEOllYx4YKXRc5mCShwtFIXWxxJFpT29BcEczKFR7kIYYhTrkjR9W2hvxLoZlCY5dxM95KLKWqyHWpYHigwsikSmQIzCTgZ6jmOMDzEhQ1UWV4VlbvCpV1tpOAeGwcnsXQaD3jqiALGzg9HqOEjfgqpOLBUQNJEa3xez9NKWgauoGcSqq2KrK8JVa7hPLHGhsdu8vQkJYRlcSIskigQtNM2i4m8AOqnRgsM5BrkORRdaptSzM8ylx/g42rEMGMRjPDZzFDnBZbi52Ijj082X7yEIOc2OYt6cAapnCH5a0qShAa/Jnh+PwPCeK2BO6WJEQB8kAUGAhZFQHA/IskvL0+YVmEvZWJNDYGURym6QR0OhFOmlBFtEqoTSWQY2gKz8d5Eao6zbGSSvOaoNKyLCCaRSISWcjxQOf/P8rA2DHiKYyG1TF6ItNiJRVT7SRqtE1DTVOjXTJnzaAW1riVVAfGSSUY7O7uDnRzAdtpD7JkkYOt9YtiagdKQGrY1xjfmTYyqlARiXINBaeTBM0aIjpS3GqnwpyjNUIHp2PINIlhSLIjsIVHW/+jSddrcnq158W7JAFMGgFP1Z5sgjYkO9gzrcwg9t+JU9AlBAUG9gTJHHAQ1GzLTE8meAIxhtVFRGU76TEKent9/AQTKApV1U5ZeDI9DoZOIEJPmbphmt7emUzBrPCJwLSgmcaG6g6XnJLwI8lkVJtewo9hRBa+zqZjdRi5RHV045IaWmd1gQMyS440Eakc1PQp9a2hLkNFK41p1ruVMs0p9VXfPt1akniBYxkgkr3+HAAgNKX2alDXdJOrLPBA4yREi3Ek03w8rtGSLAl0PBQSJKgxICSDKfVcbRrkiGhOT7c/qIXedUabWmvkbji9mvKOGl5AmggYTlJ1lmZVKNI8L8h0XCJfEh9Hd9ryKEPWResft+vgyMdtOCfzYXp9h0Cvbz95H4MgKGPmgqcK81ry8+4tdQ2MAgbUA67RbpE3m4MCnSidhIaTW+irN2/w57Ke09tXgEeHH9TFecyMrNc1mHN7poCZOauECQHOuzwKIV5qA3Nvz+Yzj+Q/1NdwPmUcvX7g47MNX0ZevrAD7OlfBkqGnXy+gpz8Xl9OkxA5fvSJRYc33Nq2afe77/++8Wb6mf5dH66+mHyNflju2tN8qe74hdLqin3N1344Whv46sfT51Zdb6IfbAseKY12/nL26ks3tuzui80s3bXhxDb58b3LPjlQ9isqfnP9Fz8XnPypvOBS8bMVJ6t8ctEJXLLut/Jvy74uv3J1wf3Vl+/x9X2+uXNrUV5Ha9PaY2z/6uUtN5kjG47vuxLSP5udMx8f/JOG75Vv3XvszIVr819J/dW6dkuU+e7QvFebl3/6zht183Y9QFXs/P5yT8OZjUWb/LGtHU9+tGD26VvLXtwMX193q+8Ue2rOircvtpSVvHXw/I5Z37SeDObqgRciH+zsT9w4PPsqfGx/f9GO+MDy/Q2BSCDl6BAAAA==");
 					xhr.setRequestHeader("Accept","application/json");
 					xhr.setRequestHeader("Accept-Language","en-US");
 					xhr.setRequestHeader("Content-Type","en-US");
 					xhr.setRequestHeader("Content-Language","application/json");
 					xhr.setRequestHeader("X-EBAY-C-MARKETPLACE-ID","EBAY-US");
-				},
-				success: function(data, textStatus, request){
-					alert(request.getResponseHeader("Access-Control-Allow-Origin"));
 				}
 			}).done(function(snapshot){
-				snapshot.
 				console.log(snapshot);
 			});
 			debugger
