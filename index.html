@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Untitled 1</title>
+<style type="text/css">
+.auto-style1 {
+	text-align: right;
+}
+</style>
+</head>
+
+<body>
+
+	<div class="auto-style1">
+
+	<script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var mainURL = "https://api.sandbox.ebay.com/buy/browse/v1/item_summary/search?q=phone&limit=50&offset=50";
+			var q = "15503 poster";
+			var filter = "sellers:{starcitybooks}";
+			$.ajax({
+				method: "GET",
+				url: mainURL,
+				//dataType: "jsonp",
+				//jsonpCallback : "callbackMethod",
+				crossDomain: true,
+				beforeSend: function(xhr){
+					xhr.setRequestHeader("Authorization", "Bearer v^1.1#i^1#f^0#p^3#I^3#r^0#t^H4sIAAAAAAAAAOVXW2wUVRjutttCraWRGEBUXEe5FWf3zGVnd6fshi1tQxN6gS0NEExzZuZsOzI7s5kz03YRS20iKXIpEuOLivVBUVBjIEggQAAhPBCjUR7wFiCgEoKEEBOEmOCZbbfdrhFaSmIT92X3nPPfvu///7PnB91FxeUbl2y8VeqalN/fDbrzXS6mBBQXFS6YUpA/szAPZAm4+ruf73b3FFxZiGFCS4rLEU4aOkaezoSmYzG9GaZsUxcNiFUs6jCBsGjJYixat1RkvUBMmoZlyIZGeWqrwhQHZBAXQBBKkOEFliW7esZmkxGmQnyIDYaCIUGQpACUBHKOsY1qdWxB3QpTLGACNOBoFjQxAdHPigzwBoNgNeVpRiZWDZ2IeAEVSYcrpnXNrFjvHSrEGJkWMUJFaqM1sYZobVV1fdNCX5atyCAPMQtaNh65WmwoyNMMNRvd2w1OS4sxW5YRxpQvMuBhpFExmgnmAcJPUw1lNsBBToJ+IHBSgHkoVNYYZgJa947D2VEVOp4WFZFuqVbqfowSNqSXkGwNruqJidoqj/O1zIaaGleRGaaqK6OrVsSql1OeWGOjabSrClIcpAzHsQE+yASoiIUwoRCZLRjqimR0OmtVbx30OGB2kO8cl4sNXVEd9rCn3rAqEQkf5ZLEZ5FEhBr0BjMat5zQsuVCGTIFIufLpNO22nQnwShBGPGkl/dPRaY2hqvhYVUHywchD6Ugx8QVlpdgpjqcXh9PhUScJEUbG31Igik6Ac21yEpqUEa0TKi1E8hUFZHnJV6Acpzm2KBM84pfpkMhP6JZJCCBhRwP4vz/skgsy1Ql20JDhZJ7kEYbpmKykUSNhqbKKSpXJH0DDZZFJw5TbZaVFH2+jo4ObwfnNcxWHwsA41tZtzQmt6EEyXxGVr2/MK2mi0NGRAuropVKkmg6Sf0R53orFeFMpRGaVqrSTpF1DGnaMLEjI4zk7v4LVOxAnVggHX1MDMCk6nXK3CsbCZ8BSUs7Wy3piD2jEfJJdor4V5DpNRFUDF1LjV6v1SZlO6A9OiVMsuEd6EgCg3h0en0sXkcaGIOOqreTWjbM1BhhjlQegw6UZcPWrQdxN6g6Bo24rcVVTXPa9UEcZqmPJUwdailLlfGQy3F1WTSZrFUmVpfFLEQSX2PQsZqBC5qOVa6kBTbu90uyP0grIE5+CIFx4VZQuyqjFnWCYddtTRsXrrrWHEik1z/+z2HV+6LjQlWF2idalYb8PFC4IKIFCYVoXpIUmswvfloKBPxBqDAgEALjwrxYU8nN0JSaaH+CSwxsIWV80MiDdGKBcm6YzAWjKDxLx4Eg0bwQZOhQnAW0HITMaCHnbGQ96f7xpPeNHK4jeekP0+M6AnpcB8l8DgKAZhaA+UUFK9wFj1JYtZB38PHqVWHci9VWncyOJvKuRakkVM38IlfdpS2rNmSN9f0vghlDg31xAVOSNeWDp4ZPCpmy6aVMAHDOc9XPMmA1eG741M1Mcz9ecmb33jtfdn0Huo6Dny/t+vaLQzd6QOmQkMtVmOfuceWFwzM7t3Z/9sqlW9+Ek5/PPTBjyundvbPm9B6QjevrZ6zlS/tulz19uuHmzbbrm8p7f0v+8dWb9b9c2L5+DWq+QO3t27lv9uHb13/aPOvqI/snH0tey3vPWv5R+9Fzc/YtuvvMxfO//7B0p7voLlexa3bsk6kXfzw1d7/77Ny8kvbX5h3ecu3D2y0Vl49INzdu585uPW8Ljx3vebtr0Y1z5WVfX6ne9Ndh9ur7U8/Coq43Dq483aucqGxqKT61bE/Hzt3r5m840106KbR1xyF5Ov606tYOpmXyExXbTr68kNq0blrq6okK74k9x5pP/rqtnO84+v0LW97ZvL3+ct+z1J3X2Xl9r761pveDP98tM2Y92T+Qxr8B+/Aaw3ARAAA=");
+					xhr.setRequestHeader("Accept","application/json");
+					xhr.setRequestHeader("Accept-Language","en-US");
+					xhr.setRequestHeader("Content-Type","en-US");
+					xhr.setRequestHeader("Content-Language","application/json");
+					xhr.setRequestHeader("X-EBAY-C-MARKETPLACE-ID","EBAY-US");
+				},
+				success: function(data, textStatus, request){
+					alert(request.getResponseHeader("Access-Control-Allow-Origin"));
+				}
+			}).done(function(snapshot){
+				snapshot.
+				console.log(snapshot);
+			});
+			debugger
+		});	
+	</script>
+	</div>
+</body>
+
+</html>
